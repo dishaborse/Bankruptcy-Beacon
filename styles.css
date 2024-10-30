@@ -5,10 +5,53 @@ header {
   padding: 20px;
   background-color: #001528;
 }
+
+
 header .logo {
   font-size: 1.5em;
   color: #fff;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
 }
+
+
+.logo img {
+  width: 110px; /* Adjust size of the logo image */
+  height: auto; /* Maintain aspect ratio */
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+.logo:hover img {
+  transform: scale(1.1) rotate(5deg);  
+}
+
+
+.logo span {
+  font-size: 1.0em; /* Adjust text size as needed */
+  color: #fff; /* Color to match your design */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 80px; /* Smaller size for mobile */
+  }
+  .logo span {
+    font-size: 0.7em;
+  }
+}
+
+
+
 header nav ul {
   display: flex;
   gap: 20px;
@@ -56,6 +99,19 @@ main h1 {
   width: 45%;
   border-radius: 5px;
 }
+
+
+button, .prediction-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover, .prediction-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
 .primary-btn, .secondary-btn {
   margin-top: 20px;
   padding: 10px 20px;
